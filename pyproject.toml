@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "solo-skills"
+version = "1.0.0"
+description = "重新定义AI与人类的协作方式 - 场景驱动的智能开发助手"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "SoloSkills Team", email = "liuji@github.com"}
+]
+keywords = ["ai", "developer-tools", "trae", "productivity", "coding-assistant", "skill-system"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Artificial Intelligence",
+    "Topic :: Productivity",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "flake8>=6.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/liuji-666/solo-skills"
+Documentation = "https://github.com/liuji-666/solo-skills#readme"
+Repository = "https://github.com/liuji-666/solo-skills"
+Issues = "https://github.com/liuji-666/solo-skills/issues"
+Changelog = "https://github.com/liuji-666/solo-skills/releases"
+
+[project.scripts]
+soloskills = "soloskills.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+  | __pycache__
+)/
+'''
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v --tb=short"

@@ -62,8 +62,8 @@ result = solo.interact("帮我开始一个新任务")
 pip install soloskills
 
 # 方式2: 直接使用源码
-git clone https://github.com/yourusername/soloskills.git
-cd soloskills
+git clone https://github.com/liuji-666/solo-skills.git
+cd solo-skills
 python -m src.soloskills.cli
 ```
 
@@ -219,7 +219,7 @@ soloskills/
 欢迎贡献代码！
 
 1. **Fork** 项目
-2. **Clone** 你的 fork: `git clone https://github.com/YOUR_USERNAME/soloskills.git`
+2. **Clone** 你的 fork: `git clone https://github.com/liuji-666/solo-skills.git`
 3. **创建分支**: `git checkout -b feature/amazing-feature`
 4. **开发**: 实现你的功能
 5. **测试**: 确保通过所有测试
@@ -258,8 +258,8 @@ soloskills/
 
 ## 💬 联系方式
 
-- GitHub Issues: [报告问题](https://github.com/yourusername/soloskills/issues)
-- 邮箱: your.email@example.com
+- GitHub Issues: [报告问题](https://github.com/liuji-666/solo-skills/issues)
+- 欢迎提交 Issue 或 PR
 
 ---
 
